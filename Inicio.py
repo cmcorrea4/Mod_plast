@@ -10,8 +10,8 @@ import tempfile
 
 # Configuración de la página sin el parámetro theme (compatible con versiones anteriores)
 st.set_page_config(
-    page_title="Asistente Digital",
-    page_icon="⚡",
+    page_title="Agente Plastico",
+    page_icon="🛠️",
     layout="wide",
     initial_sidebar_state="collapsed",
     menu_items=None
@@ -88,7 +88,7 @@ def initialize_session_vars():
         st.session_state.is_configured = False
     if "agent_endpoint" not in st.session_state:
         # Endpoint fijo como solicitado
-        st.session_state.agent_endpoint = "https://z4rbf27rqwp3tthn2u4vlugj.agents.do-ai.run"
+        st.session_state.agent_endpoint = "https://wrmsxa7zjmmvwkkd3odizpjj.agents.do-ai.run"
     if "agent_access_key" not in st.session_state:
         st.session_state.agent_access_key = ""
     if "messages" not in st.session_state:
@@ -123,7 +123,7 @@ def text_to_speech(text):
         return f"<div class='error'>Error al generar audio: {str(e)}</div>"
 
 # Título y descripción de la aplicación
-st.markdown("<h1 class='main-header'>Asistente SUME EnergyC</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-header'>Asistente Empresa del Plástico</h1>", unsafe_allow_html=True)
 
 # Pantalla de configuración inicial si aún no se ha configurado
 if not st.session_state.is_configured:
