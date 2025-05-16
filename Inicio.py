@@ -123,7 +123,7 @@ def text_to_speech(text):
         return f"<div class='error'>Error al generar audio: {str(e)}</div>"
 
 # Título y descripción de la aplicación
-st.markdown("<h1 class='main-header'>Asistente Empresa del Plástico</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-header'>Asistente Industria del Plástico</h1>", unsafe_allow_html=True)
 
 # Pantalla de configuración inicial si aún no se ha configurado
 if not st.session_state.is_configured:
