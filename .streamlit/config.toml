@@ -1,6 +1,6 @@
 [theme]
-primaryColor="#FF4B4B"
-backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
-textColor="#31333F"
-font="sans serif"
+primaryColor="#0078D4"       # Azul profesional
+backgroundColor="#FFFFFF"    # Fondo blanco
+secondaryBackgroundColor="#F8F9FA"  # Gris muy claro
+textColor="#212529"          # Negro suave para mejor legibilidad
+font="sans serif"            # Fuente sans serif
