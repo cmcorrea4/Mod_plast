@@ -10,52 +10,50 @@ import tempfile
 
 # Configuración de la página sin el parámetro theme (compatible con versiones anteriores)
 st.set_page_config(
-    page_title="Agente Plastico",
+    page_title="Asistente Industria del Plástico",
     page_icon="🛠️",
     layout="wide",
     initial_sidebar_state="collapsed",
     menu_items=None
 )
 
-# Establecer tema oscuro mediante CSS personalizado para versiones anteriores
+# Establecer tema claro profesional mediante CSS personalizado
 st.markdown("""
 <style>
-    /* Tema oscuro personalizado para versiones anteriores de Streamlit */
+    /* Tema claro profesional personalizado */
     body {
-        color: #fafafa;
-        background-color: #0e1117;
+        color: #212529;
+        background-color: #FFFFFF;
     }
     .stApp {
-        background-color: #0e1117;
+        background-color: #FFFFFF;
     }
     .stTextInput>div>div>input {
-        background-color: #262730;
-        color: white;
+        background-color: #F8F9FA;
+        color: #212529;
+        border: 1px solid #CED4DA;
     }
     .stSlider>div>div>div {
-        color: white;
+        color: #212529;
     }
     .stSelectbox>div>div>div {
-        background-color: #262730;
-        color: white;
+        background-color: #F8F9FA;
+        color: #212529;
+        border: 1px solid #CED4DA;
     }
 
-    .css-1d391kg, .css-12oz5g7 {
-        background-color: #262730;
-    }
-    
-    /* Estilos personalizados para el asistente - Todos los títulos en BLANCO */
+    /* Estilos personalizados para el asistente */
     .main-header {
         font-size: 2.5rem;
-        color: #FFFFFF;
+        color: #0078D4;
         text-align: center;
         margin-bottom: 2rem;
         font-weight: bold;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     .subheader {
         font-size: 1.5rem;
-        color: #FFFFFF;
+        color: #0078D4;
         margin-bottom: 1rem;
     }
     .audio-controls {
@@ -67,17 +65,54 @@ st.markdown("""
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: #0e1117;
+        background-color: #F8F9FA;
         text-align: center;
         padding: 10px;
         font-size: 0.8rem;
+        border-top: 1px solid #E9ECEF;
+        color: #6C757D;
     }
-    /* Asegurar que todos los títulos en la barra lateral también sean blancos */
+    
+    /* Personalización de ejemplos de preguntas */
+    .example-questions ul li {
+        margin-bottom: 0.8rem;
+        padding: 0.5rem 0.8rem;
+        background-color: rgba(0, 120, 212, 0.1);
+        border-radius: 4px;
+        border-left: 3px solid #0078D4;
+    }
+    .example-questions ul li span {
+        font-weight: 500;
+        color: #0078D4;
+    }
+    
+    /* Personalización de la barra lateral */
     .sidebar .sidebar-content h1, 
     .sidebar .sidebar-content h2, 
-    .sidebar .sidebar-content h3,
-    .css-1outpf7 {
-        color: #FFFFFF !important;
+    .sidebar .sidebar-content h3 {
+        color: #0078D4 !important;
+    }
+    
+    /* Mejoras en botones y controles */
+    .stButton>button {
+        background-color: #0078D4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+    }
+    .stButton>button:hover {
+        background-color: #005A9E;
+    }
+    
+    /* Estilos para los mensajes de chat */
+    .stChatMessage {
+        background-color: #F8F9FA;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #E9ECEF;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -159,21 +194,21 @@ st.markdown("<p class='subheader'>Interactúa con tu asistente.</p>", unsafe_all
 # Agregar ejemplos de preguntas con estilo profesional
 st.markdown("""
 <div class="example-questions">
-    <p style="font-size: 0.9rem; color: #8EBBFF; margin-bottom: 1.5rem; font-style: italic; font-family: 'Segoe UI', Arial, sans-serif;">
+    <p style="font-size: 0.9rem; color: #0078D4; margin-bottom: 1.5rem; font-style: italic; font-family: 'Segoe UI', Arial, sans-serif;">
         Ejemplos de preguntas que puedes hacerle:
     </p>
     <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.5rem; font-family: 'Segoe UI', Arial, sans-serif;">
-        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Cual fué el promedio de temperatura  de la última hora?</span>
+        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(0, 120, 212, 0.1); border-radius: 4px; border-left: 3px solid #0078D4;">
+            <span style="font-weight: 500; color: #0078D4;">¿Cual fué el promedio de temperatura  de la última hora?</span>
         </li>
-        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme el número de piezas conformes en las últimas 3 horas?</span>
+        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(0, 120, 212, 0.1); border-radius: 4px; border-left: 3px solid #0078D4;">
+            <span style="font-weight: 500; color: #0078D4;">¿Puedes darme el número de piezas conformes en las últimas 3 horas?</span>
         </li>
-        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme tiempo de operación y el tiempo de paro de la máquina en las últimas 2 horas?</span>
+        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(0, 120, 212, 0.1); border-radius: 4px; border-left: 3px solid #0078D4;">
+            <span style="font-weight: 500; color: #0078D4;">¿Puedes darme tiempo de operación y el tiempo de paro de la máquina en las últimas 2 horas?</span>
         </li>
-        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme un gráfico de la temperatura de la última hora?</span>
+        <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(0, 120, 212, 0.1); border-radius: 4px; border-left: 3px solid #0078D4;">
+            <span style="font-weight: 500; color: #0078D4;">¿Puedes darme un gráfico de la temperatura de la última hora?</span>
         </li>
     </ul>
 </div>
@@ -287,7 +322,7 @@ if st.sidebar.button("💾 Guardar conversación en PDF"):
             pdf.set_text_color(0, 0, 255)  # Azul para usuario
             pdf.cell(200, 10, "Usuario:", ln=True)
         else:
-            pdf.set_text_color(0, 128, 0)  # Verde para asistente
+            pdf.set_text_color(0, 120, 212)  # Azul de la app para asistente
             pdf.cell(200, 10, "Asistente:", ln=True)
         
         pdf.set_text_color(0, 0, 0)  # Negro para el contenido
@@ -506,4 +541,4 @@ if prompt:
                 st.session_state.messages.append(message_data)
 
 # Pie de página
-st.markdown("<div class='footer'>Asistente Digital © 2025</div>", unsafe_allow_html=True)
+st.markdown("<div class='footer'>Asistente Digital Industria del Plástico © 2025</div>", unsafe_allow_html=True)
