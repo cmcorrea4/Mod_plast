@@ -164,7 +164,7 @@ st.markdown("""
     </p>
     <ul style="list-style-type: none; padding-left: 0; margin-bottom: 1.5rem; font-family: 'Segoe UI', Arial, sans-serif;">
         <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Cual fué el promedio de temperatura  de la últimas hora?</span>
+            <span style="font-weight: 500; color: #BBDEFB;">¿Cual fué el promedio de temperatura  de la última hora?</span>
         </li>
         <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
             <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme el número de piezas conformes en las últimas 3 horas?</span>
