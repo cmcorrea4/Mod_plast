@@ -167,13 +167,13 @@ st.markdown("""
             <span style="font-weight: 500; color: #BBDEFB;">¿Cual fué la máxima temperatura  de las últimas 2 horas?</span>
         </li>
         <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme el número de piezas conformes en la última hora?</span>
+            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme el número de piezas conformes en las últimas 3 horas?</span>
         </li>
         <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
             <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme tiempo de operación y el tiempo de paro de la máquina en las últimas 2 horas?</span>
         </li>
         <li style="margin-bottom: 0.8rem; padding: 0.5rem 0.8rem; background-color: rgba(30, 136, 229, 0.1); border-radius: 4px; border-left: 3px solid #FF9800;">
-            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme un gráfico de torta (pie) que muestre el tiempo de operación y tiempo de paro de la última hora?</span>
+            <span style="font-weight: 500; color: #BBDEFB;">¿Puedes darme un gráfico de la temperatura de la última hora?</span>
         </li>
     </ul>
 </div>
