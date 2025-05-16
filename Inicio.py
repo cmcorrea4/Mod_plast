@@ -93,17 +93,18 @@ st.markdown("""
         color: #0078D4 !important;
     }
     
-    /* Mejoras en botones y controles */
+    /* Botones transparentes con borde */
     .stButton>button {
-        background-color: #0078D4;
-        color: white;
-        border: none;
+        background-color: transparent !important;
+        color: #0078D4 !important;
+        border: 1px solid #0078D4 !important;
         border-radius: 4px;
         padding: 0.5rem 1rem;
-        transition: background-color 0.3s;
+        transition: all 0.3s;
     }
     .stButton>button:hover {
-        background-color: #005A9E;
+        background-color: rgba(0, 120, 212, 0.1) !important;
+        border-color: #0078D4 !important;
     }
     
     /* Estilos para los mensajes de chat */
